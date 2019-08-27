@@ -4,7 +4,7 @@ import classes from './Modal.css';
 
 const modal = (props) => (
     <div className={classes.Modal}>
-        {props.childer}
+        {props.children}
     </div>
 );
 
