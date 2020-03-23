@@ -56,12 +56,10 @@ export const auth = (email, password, isSingup) => {
                 localStorage.setItem('token', response.data.idToken);
                 localStorage.setItem('expirationDate',expirationDate);
                 localStorage.setItem('userId', response.data.localId);
-                console.log(response);
                 dispatch(authSuccess(response.data.idToken, response.data.localId));
                 dispatch(checkAuthTimeout(response.data.expiresIn));
             })
             .catch(error => {
-                console.log(error);
                 dispatch(authFail(error.response.data.error));
             })
     }
