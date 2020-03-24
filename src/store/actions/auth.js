@@ -47,8 +47,8 @@ export const auth = (email, password, isSingup) => {
             returnSecureToken: true
         }
 
-        let url = isSingup ? 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyBPmxrXOma_qa7Fb32DC4ULzLpsqXmd2RA' 
-            : 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyBPmxrXOma_qa7Fb32DC4ULzLpsqXmd2RA';
+        let url = isSingup ? 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=[API_KEY]' 
+            : 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=[API_KEY]';
 
         Axios.post(url, authData)
             .then(response => {
